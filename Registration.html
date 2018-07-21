@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Registration | Shoping</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="Stylesheet.css">
+</head>
+
+<body class="MainContent">
+	<h1 class="HeadClass">Tell us about you.</h1>
+
+	<form method="post" action="<?php require 'Registration.php'; ?>">
+
+		<span class="error">* Required field <br><br></span>
+
+		Username: <input type="text" name="username" placeholder="type your fname name">
+		<span class="error">* <?php echo $fname;?></span>
+		<br><br>
+
+		E-mail: <input type="text" name="email" placeholder="type your email">
+		<span class="error">* <?php echo $emailErr;?></span>
+		<br><br>
+
+		Password: <input type="password" name="password" placeholder="type your password address">
+		<span class="error">* <?php echo $passwordErr;?></span>
+		<br><br>
+
+		Gender:
+		<input type="radio" name="gender" value="female">Female
+		<input type="radio" name="gender" value="male">Male
+		<span class="error">* <?php echo $genderErr;?></span>
+		<br><br>
+
+		<input type="submit" name="submit" value="Submit">  
+		<a class="LoginDec" href="login.php">Log in</a>
+	</form>
+</body>
+</html>
